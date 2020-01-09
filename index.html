@@ -18,9 +18,14 @@
         <a-asset-item id="clip" src="./../drankautomaat/clip.gltf"></a-asset-item>
         <a-asset-item id="fless" src="./../drankautomaat/fless.gltf"></a-asset-item>
         <a-asset-item id="kar" src="./../drankautomaat/kar.gltf"></a-asset-item>
+        <a-asset-item id="toilet" src="./../toillet/toiletruimte.gltf"></a-asset-item>
+        <a-asset-item id="deur" src="./../toillet/toilet.gltf"></a-asset-item>
+        <a-asset-item id="table" src="./../tafel/bartables.gltf"></a-asset-item>
+        <a-asset-item id="kassa" src="./../kassabank/kassa.gltf"></a-asset-item>
+        <a-asset-item id="yoghurt" src="./../danone/activia.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="4 3 0">
+      <a-camera position="15 3 0">
         <a-entity gltf-model="#kar" scale="0.7 0.7 0.7" cursor="fuse: true; fuseTimeout: 500"
               position="0 0 -1"
               geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -31,6 +36,12 @@
       <a-entity drankautomaat id="drankautomaat" transparent: true; gltf-model="#drank" position="0 0 -5" modify-materials></a-entity>
       <a-entity drankautomaat id="drankautomaat" transparent: true; gltf-model="#clip" position="0 0 -5" modify-materials></a-entity>
       <a-entity id="box" drankautomaat id="drankautomaat" transparent: true; gltf-model="#fless" position="0.3 3.05 -4.5" modify-materials></a-entity>
+      <a-entity drankautomaat id="toiletruimte" transparent: true; gltf-model="#toilet" scale="1.5 1.5 1.5" position="-5 -1 -8" modify-materials></a-entity>
+      <a-entity drankautomaat id="toiletdeur" transparent: true; gltf-model="#deur" scale="1.5 1.5 1.5" position="-7.8 0 -2.3" modify-materials></a-entity>
+      <a-entity drankautomaat id="bartable" transparent: true; gltf-model="#table" position="5 0 -5" scale="2.5 2.5 2.5" modify-materials></a-entity>
+      <a-entity drankautomaat id="kassatafel" transparent: true; gltf-model="#kassa" position="15 0 -5" scale="2 2 2" modify-materials></a-entity>
+      <a-entity drankautomaat id="yoghurtpotje" transparent: true; gltf-model="#yoghurt" position="14 2.5 -5" scale="0.1 0.1 0.1" modify-materials></a-entity>
+
         
       </a-box>
     </a-scene>
@@ -47,6 +58,20 @@
             console.log("clicked2");
             document.getElementById('box').setAttribute("animation", "property: position; to: 0.3 0.5 -4.5; loop: 1; dur: 1000;")
             document.getElementById('box').setAttribute("animation__2", "property: rotation; to: 0 0 60; loop: true; dur: 1000")
+            
+  
+        })
+    
+  }});
+    AFRAME.registerComponent('toiletruimte', {
+    init: function (){ 
+        const el = this.el
+        console.log(el);
+        console.log("clicked1");
+        
+        el.addEventListener('click', function(){
+            console.log("clicked2");
+            document.getElementById('toiletdeur').setAttribute("animation", "property: rotation; to: 0 100 0; loop: true; dur: 1000")
             
   
         })
