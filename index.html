@@ -14,18 +14,18 @@
 
     <a-scene background="color: #ECECEC">
       <a-assets material="transparent: true;">
-        <a-asset-item id="drank" src="./../drankautomaat/drank.gltf"></a-asset-item>
-        <a-asset-item id="clip" src="./../drankautomaat/clip.gltf"></a-asset-item>
-        <a-asset-item id="fless" src="./../drankautomaat/fless.gltf"></a-asset-item>
-        <a-asset-item id="kar" src="./../drankautomaat/kar.gltf"></a-asset-item>
-        <a-asset-item id="toilet" src="./../toillet/toiletruimte.gltf"></a-asset-item>
-        <a-asset-item id="deur" src="./../toillet/toilet.gltf"></a-asset-item>
-        <a-asset-item id="table" src="./../tafel/bartables.gltf"></a-asset-item>
-        <a-asset-item id="kassa" src="./../kassabank/kassa.gltf"></a-asset-item>
-        <a-asset-item id="yoghurt" src="./../danone/activia.gltf"></a-asset-item>
+        <a-asset-item id="drank" src="./drankautomaat/drank.gltf"></a-asset-item>
+        <a-asset-item id="clip" src="./drankautomaat/clip.gltf"></a-asset-item>
+        <a-asset-item id="fless" src="./drankautomaat/fless.gltf"></a-asset-item>
+        <a-asset-item id="kar" src="./drankautomaat/kar.gltf"></a-asset-item>
+        <a-asset-item id="toilet" src="./toillet/toiletruimte.gltf"></a-asset-item>
+        <a-asset-item id="deur" src="./toillet/toilet.gltf"></a-asset-item>
+        <a-asset-item id="table" src="./tafel/bartables.gltf"></a-asset-item>
+        <a-asset-item id="kassa" src="./kassabank/kassa.gltf"></a-asset-item>
+        <a-asset-item id="yoghurt" src="./danone/activia.gltf"></a-asset-item>
       </a-assets>
 
-      <a-camera position="15 3 0">
+      <a-camera position="4 3 0">
         <a-entity gltf-model="#kar" scale="0.7 0.7 0.7" cursor="fuse: true; fuseTimeout: 500"
               position="0 0 -1"
               geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -63,19 +63,6 @@
         })
     
   }});
-    AFRAME.registerComponent('toiletruimte', {
-    init: function (){ 
-        const el = this.el
-        console.log(el);
-        console.log("clicked1");
-        
-        el.addEventListener('click', function(){
-            console.log("clicked2");
-            document.getElementById('toiletdeur').setAttribute("animation", "property: rotation; to: 0 100 0; loop: true; dur: 1000")
-            
-  
-        })
     
-  }});
   </script>
 </html>
